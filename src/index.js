@@ -28,10 +28,14 @@
 // require('dotenv').config({path: './env'})// Telling or giving the path that .env is in homedirectory but this is require syntax code not consistent
 import dotenv from "dotenv"
 import connectDB from "./db/index.js";
+import express from "express"
+import { app } from "./app.js";
+
 
 dotenv.config({
     path: './env'
 }) // This is more professional approach to connect database actually here we're configuring the dotenv file which would't be required if just 1 st required sytnax is just present
+
 
 
 connectDB()
@@ -42,6 +46,6 @@ connectDB()
     })
 })
 .catch((err) => {
-    console.log("MOGO db connection failed !! ", err);
+    console.log("MONGO db connection failed !! ", err);
     
 })
