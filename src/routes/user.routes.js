@@ -20,6 +20,7 @@ router.route("/register").post(
 )
 
 router.route("/login").post(loginUser)
+router.route("/refresh-token").post(refreshAccessToken)
 
 // secured routes
 router.route("/logout").post(verifyJWT, logoutUser) // logoutUser controller to be added here ... also that's why next so that control goes from 1st to 2nd
